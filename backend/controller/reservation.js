@@ -4,15 +4,7 @@ import { Reservation } from "../models/reservationSchema.js";
 export const sendReservation = async (req, res, next) => {
   const { firstName, lastName, email, phone, date, time, people, message } =
     req.body;
-  if (
-    !firstName ||
-    !lastName ||
-    !email ||
-    !phone ||
-    !date ||
-    !time ||
-    !people
-  ) {
+  if (!firstName || !lastName || !email || !phone || !date || !time) {
     return next(new ErrorHandler(400, "Please fill in all the fields"));
   }
   try {
@@ -23,8 +15,6 @@ export const sendReservation = async (req, res, next) => {
       phone,
       date,
       time,
-      people,
-      message,
     });
     return res.status(201).json({
       success: true,
@@ -33,7 +23,7 @@ export const sendReservation = async (req, res, next) => {
   } catch (error) {
     if (error.name === "ValidationError") {
       const ValidationError = Object.values(error.errors).map(
-        (err) => value.message
+        (err) => err.message
       );
       return next(new ErrorHandler(400, ValidationError.join(" ")));
     }

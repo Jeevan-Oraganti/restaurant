@@ -44,17 +44,6 @@ const reservationSchema = new mongoose.Schema({
     required: true,
     enum: ["12:00", "15:00", "18:00", "21:00"],
   },
-  people: {
-    type: Number,
-    required: true,
-    min: 1,
-    max: 10,
-  },
-  message: {
-    type: String,
-    trim: true,
-    maxlength: 100,
-  },
 });
 
 export const Reservation = mongoose.model("Reservation", reservationSchema);
