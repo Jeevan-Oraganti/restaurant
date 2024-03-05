@@ -8,6 +8,7 @@ import Team from "../components/Team";
 import Reservation from "../components/Reservation";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Testimonials from "../components/Testimonials";
 const Home = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const Home = () => {
       <WhoAreWe />
       <Team />
       <Reservation />
+      <Testimonials />
       <Footer />
     </>
   );

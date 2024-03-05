@@ -21,7 +21,11 @@ const Navbar = () => {
                 {element.title}
               </Link>
             ))}
+            <Link to="testimonials" spy={true} smooth={true} duration={500}>
+              TESTIMONIALS
+            </Link>
           </div>
+
           <button className="menuBtn">OUR MENU</button>
         </div>
         <div className="hamburger" onClick={() => setShow(!show)}>

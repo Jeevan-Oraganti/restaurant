@@ -13,13 +13,10 @@ const About = () => {
               <p>The only thing we're serious about is food.</p>
             </div>
             <p className="mid">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Provident possimus optio adipisci dolores impedit illum iusto
-              perferendis, laudantium quod accusamus consequuntur consectetur,
-              tempore nulla error iure reiciendis dolorem assumenda.
-              Necessitatibus fugit asperiores totam rem esse exercitationem
-              iusto ipsum qui dolore ex, accusantium repellat mollitia
-              repellendus.
+              At Jeevan, we take pride in our commitment to delivering quality
+              food. Our mission is simple – to provide delicious and safe file
+              viewing solutions. Discover the story behind SquareX and our
+              dedicated team.
             </p>
             <Link to={"Menu"}>
               Explore Menu{" "}
